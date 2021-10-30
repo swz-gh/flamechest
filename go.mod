@@ -1,4 +1,4 @@
-module github.com/swz-gh/flamechest
+module github.com/swz-git/flamechest
 
 go 1.17
 
