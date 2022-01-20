@@ -32,6 +32,10 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
+	if string(img) == "screenshot aborted\n" {
+		fmt.Println("Screenshot aborted")
+		return
+	}
 
 	client := &http.Client{}
 	req, _ := http.NewRequest("POST", os.Getenv("FLAMECHEST_ENDPOINT"), bytes.NewReader(img))
